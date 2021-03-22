@@ -2,16 +2,23 @@ import { Socket } from 'net'
 import { IIRCServer } from '../Server/IServer'
 
 export interface IUser {
-  authenticated: boolean;
-  channels: Array<string>;
-  connection: Socket;
-  modes: Array<string>;
-  nickname: string;
-  realname: string;
-  username: string;
-  hostname: string|unknown;
-  server: IIRCServer;
+  channels: Array<string>
+  connection: Socket
+  hostname: string | undefined
+  modes: Array<string>
+  nickname: string
+  realname: string
+  registered: boolean
+  server: IIRCServer
+  username: string
 
   getMask(): string
-  send(message: string): void
+  
+  getModes(): Array<string>,
+
+  addMode (mode: string): void,
+
+  removeMode (mode: string): void,
+
+  send(prefix: IUser | IIRCServer, command: string | number, parameters: Array<string> | string): void
 }

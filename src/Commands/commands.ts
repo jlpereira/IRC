@@ -14,6 +14,7 @@ import PING from './ping'
 import PRIVMSG from './privmsg'
 import QUIT from './quit'
 import TOPIC from './topic'
+import USER from './user'
 import USERS from './users'
 import VERSION from './version'
 import WHO from './who'
@@ -40,6 +41,7 @@ export const Commands: CommandsInterface = {
   PRIVMSG,
   QUIT,
   TOPIC,
+  USER,
   USERS,
   VERSION,
   WHO,

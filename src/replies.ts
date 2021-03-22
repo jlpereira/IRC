@@ -1,6 +1,23 @@
 // RFC 2812
 
 export const
+  RPL_WELCOME = '001', // "Welcome to the Internet Relay Network <nick>!<user>@<host>"
+  RPL_YOURHOST = '002', // "Your host is <servername>, running version <ver>"
+  RPL_CREATED = '003', // "This server was created <date>"
+  RPL_MYINFO = '004', // "<servername> <version> <available user modes> <available channel modes>"
+  RPL_AWAY = 301, // "<nick> :<away message>"
+  RPL_UNAWAY = 305, // ":You are no longer marked as being away"
+  RPL_NOWAWAY = 306, // ":You have been marked as being away"
+  RPL_WHOISUSER = 311, // "<nick> <user> <host> * :<real name>"
+  RPL_WHOISSERVER = 312, // "<nick> <server> :<server info>"
+  RPL_WHOISOPERATOR = 313, // "<nick> :is an IRC operator"
+  RPL_WHOWASUSER = 314, // "<nick> <user> <host> * :<real name>"
+  RPL_WHOISIDLE = 317, // "<nick> <integer> :seconds idle"
+  RPL_ENDOFWHOIS = 318, // "<nick> :End of WHOIS list"
+  RPL_WHOISCHANNELS = 319, // "<nick> :*( ( "@" / "+" ) <channel> " " )"
+  RPL_LIST = 322, // "<channel> <# visible> :<topic>"
+  RPL_LISTEND = 323, // ":End of LIST"
+  RPL_ENDOFWHOWAS = 369, // "<nick> :End of WHOWAS"
   ERR_NOSUCHNICK = 401, // "<nickname> :No such nick/channel"
   ERR_NOSUCHSERVER = 402, // "<server name> :No such server"
   ERR_NOSUCHCHANNEL = 403, // "<channel name> :No such channel"
