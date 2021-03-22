@@ -15,6 +15,7 @@ class User implements IUser {
   registered: boolean = false
   server: IIRCServer
   username: string = ''
+  servername: string = ''
 
   constructor (s: Socket, server: IIRCServer) {
     this.server = server

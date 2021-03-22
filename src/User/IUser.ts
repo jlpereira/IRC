@@ -11,6 +11,7 @@ export interface IUser {
   registered: boolean
   server: IIRCServer
   username: string
+  servername: string
 
   getMask(): string
   

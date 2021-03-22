@@ -13,7 +13,9 @@ export default (context: IUser, [ nickname ]: any) => {
     if(nicknameLength > 8) {
       context.send(context.server, ERR_ERRONEUSNICKNAME, ':Erroneous nickname')
     }
-    context.send(context, 'NICK', `:${nickname}`)
+    context.send(context, 'NICK', [ nickname ])
     context.nickname = nickname
   }
+
+  // TODO: Check users that already have the same nickname.
 }
